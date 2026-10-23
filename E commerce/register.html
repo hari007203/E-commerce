@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        /* From Uiverse.io by ammarsaa */ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(0, 191, 255, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(0, 191, 255, 0.08),
+            transparent 35%
+        ),
+        #0d0f14;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form {
+    width: 100%;
+    max-width: 390px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 36px;
+
+    border-radius: 18px;
+
+    position: relative;
+
+    background: rgba(26, 26, 26, 0.95);
+
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* Top subtle glow */
+
+.form::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -80px;
+
+    background: #00bfff;
+
+    opacity: 0.08;
+
+    border-radius: 50%;
+
+    filter: blur(40px);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.title {
+    font-size: 30px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 30px;
+
+    margin-bottom: 2px;
+
+    color: #ffffff;
+}
+
+
+/* Title dot */
+
+.title::before,
+.title::after {
+    position: absolute;
+
+    content: "";
+
+    border-radius: 50%;
+
+    left: 0;
+
+    background-color: #00bfff;
+}
+
+
+.title::before {
+    width: 17px;
+    height: 17px;
+
+    box-shadow:
+        0 0 12px rgba(0, 191, 255, 0.7);
+}
+
+
+.title::after {
+    width: 17px;
+    height: 17px;
+
+    animation: pulse 1.5s linear infinite;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.flex {
+    display: flex;
+
+    width: 100%;
+
+    gap: 10px;
+}
+
+
+.form label {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.form label .input {
+    width: 100%;
+
+    height: 58px;
+
+    padding:
+        20px 12px 6px 12px;
+
+    outline: none;
+
+    background: #22242c;
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* Input hover */
+
+.form label .input:hover {
+    border-color: rgba(0, 191, 255, 0.35);
+}
+
+
+/* Input focus */
+
+.form label .input:focus {
+    background: #20222a;
+
+    border-color: #00bfff;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 191, 255, 0.08);
+}
+
+
+/* =========================
+   FLOATING LABEL
+========================= */
+
+.form label .input + span {
+    position: absolute;
+
+    left: 12px;
+
+    top: 6px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    pointer-events: none;
+
+    transition:
+        top 0.25s ease,
+        color 0.25s ease,
+        font-size 0.25s ease;
+}
+
+
+/* Empty input */
+
+.form label .input:placeholder-shown + span {
+    top: 19px;
+
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* Focused / filled input */
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+    top: 6px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #00bfff;
+}
+
+
+/* =========================
+   INPUT TEXT
+========================= */
+
+.input {
+    font-size: 15px;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 4px;
+
+    border: none;
+
+    outline: none;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    color: #061018;
+
+    background: #00bfff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Button hover */
+
+.submit:hover {
+    background: #27c9ff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 191, 255, 0.2);
+}
+
+
+/* Button click */
+
+.submit:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SIGN IN
+========================= */
+
+.signin {
+    text-align: center;
+
+    font-size: 13.5px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    margin-top: 2px;
+}
+
+
+.signin a {
+    color: #00bfff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+
+.signin a:hover {
+    color: #6edcff;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   PULSE ANIMATION
+========================= */
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(0.9);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.8);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .form {
+        padding: 28px 22px;
+
+        border-radius: 15px;
+    }
+
+    .title {
+        font-size: 27px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+}   </style>
+</head>
+<body>
+    <!-- From Uiverse.io by ammarsaa --> 
+<form class="form">
+    <p class="title">Register </p>
+    <p class="message">Signup now and get full access to our app. </p>
+        <div class="flex">
+        <label>
+            <input class="input" type="text" placeholder="" required="">
+            <span>Firstname</span>
+        </label>
+
+        <label>
+            <input class="input" type="text" placeholder="" required="">
+            <span>Lastname</span>
+        </label>
+    </div>  
+            
+    <label>
+        <input class="input" type="email" placeholder="" required="">
+        <span>Email</span>
+    </label> 
+        
+    <label>
+        <input class="input" type="password" placeholder="" required="">
+        <span>Password</span>
+    </label>
+    <label>
+        <input class="input" type="password" placeholder="" required="">
+        <span>Confirm password</span>
+    </label>
+    <button class="submit">Submit</button>
+    <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+</form>
+
+
+</body>
+</html>

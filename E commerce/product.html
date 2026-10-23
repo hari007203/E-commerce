@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZone | Products</title>
+    <link rel="stylesheet" href="./product.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="./loading.html" class="logo">
+                Shop<span>Zone</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="./loading.html">Home</a>
+                <a href="./product.html" class="active">Products</a>
+                <a href="./login.html">Login</a>
+                <a href="./register.html">Register</a>
+            </nav>
+
+            <button class="cart-btn" id="cartBtn">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </button>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+        </div>
+    </header>
+
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="header-content">
+            <span class="small-title">SHOPZONE STORE</span>
+            <h1>Explore Our Products</h1>
+            <p>
+                Discover premium products at amazing prices.
+                Quality, style and value — all in one place.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- PRODUCTS SECTION -->
+    <main class="products-section">
+
+        <div class="section-top">
+
+            <div>
+                <span class="section-label">OUR COLLECTION</span>
+                <h2>Featured Products</h2>
+            </div>
+
+            <div class="controls">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="shoes">Shoes</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+
+                <select id="sortProducts">
+                    <option value="default">Sort By</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="name">Name: A-Z</option>
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT GRID -->
+        <div class="product-grid" id="productGrid">
+
+            <!-- PRODUCT 1 -->
+            <article class="product-card" data-category="electronics" data-price="79.99">
+
+                <div class="product-image">
+                    <span class="badge">NEW</span>
+                    <img
+                        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+                        alt="Wireless Headphones"
+                    >
+
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+                    <span class="category">Electronics</span>
+
+                    <h3>Wireless Headphones</h3>
+
+                    <p class="description">
+                        Premium wireless headphones with deep bass
+                        and crystal-clear sound.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(128)</span>
+                    </div>
+
+                    <div class="product-bottom">
+                        <div class="price">
+                            <span>$99.99</span>
+                            <strong>$79.99</strong>
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-name="Wireless Headphones"
+                            data-price="79.99"
+                        >
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+            <article class="product-card" data-category="shoes" data-price="64.99">
+
+                <div class="product-image">
+                    <span class="badge sale">SALE</span>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+                        alt="Running Shoes"
+                    >
+
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+                    <span class="category">Shoes</span>
+
+                    <h3>Premium Running Shoes</h3>
+
+                    <p class="description">
+                        Lightweight running shoes designed for
+                        everyday comfort and performance.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(94)</span>
+                    </div>
+
+                    <div class="product-bottom">
+                        <div class="price">
+                            <span>$89.99</span>
+                            <strong>$64.99</strong>
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-name="Premium Running Shoes"
+                            data-price="64.99"
+                        >
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+            <article class="product-card" data-category="electronics" data-price="129.99">
+
+                <div class="product-image">
+                    <span class="badge">POPULAR</span>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
+                        alt="Smart Watch"
+                    >
+
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+                    <span class="category">Electronics</span>
+
+                    <h3>Smart Watch Pro</h3>
+
+                    <p class="description">
+                        Track your fitness, notifications and
+                        daily activities with style.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★☆
+                        <span>(76)</span>
+                    </div>
+
+                    <div class="product-bottom">
+                        <div class="price">
+                            <span>$159.99</span>
+                            <strong>$129.99</strong>
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-name="Smart Watch Pro"
+                            data-price="129.99"
+                        >
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 4 -->
+            <article class="product-card" data-category="fashion" data-price="49.99">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=80"
+                        alt="Premium Hoodie"
+                    >
+
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+                    <span class="category">Fashion</span>
+
+                    <h3>Premium Cotton Hoodie</h3>
+
+                    <p class="description">
+                        Soft premium cotton hoodie with a modern
+                        relaxed fit.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(61)</span>
+                    </div>
+
+                    <div class="product-bottom">
+                        <div class="price">
+                            <strong>$49.99</strong>
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-name="Premium Cotton Hoodie"
+                            data-price="49.99"
+                        >
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 5 -->
+            <article class="product-card" data-category="accessories" data-price="39.99">
+
+                <div class="product-image">
+                    <span class="badge">NEW</span>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80"
+                        alt="Urban Backpack"
+                    >
+
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+                    <span class="category">Accessories</span>
+
+                    <h3>Urban Travel Backpack</h3>
+
+                    <p class="description">
+                        Spacious and stylish backpack for work,
+                        travel and everyday use.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★☆
+                        <span>(83)</span>
+                    </div>
+
+                    <div class="product-bottom">
+                        <div class="price">
+                            <strong>$39.99</strong>
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-name="Urban Travel Backpack"
+                            data-price="39.99"
+                        >
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 6 -->
+            <article class="product-card" data-category="accessories" data-price="24.99">
+
+                <div class="product-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=700&q=80"
+                        alt="Classic Watch"
+                    >
+
+                    <button class="wishlist">♡</button>
+                </div>
+
+                <div class="product-info">
+                    <span class="category">Accessories</span>
+
+                    <h3>Classic Leather Watch</h3>
+
+                    <p class="description">
+                        Elegant minimalist watch with a premium
+                        leather strap.
+                    </p>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(112)</span>
+                    </div>
+
+                    <div class="product-bottom">
+                        <div class="price">
+                            <strong>$24.99</strong>
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-name="Classic Leather Watch"
+                            data-price="24.99"
+                        >
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="no-products" id="noProducts">
+            <h3>No products found</h3>
+            <p>Try another search or category.</p>
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <a href="./loading.html" class="logo">
+                    Shop<span>Zone</span>
+                </a>
+
+                <p>
+                    Your trusted destination for quality products,
+                    great prices and excellent service.
+                </p>
+            </div>
+
+            <div>
+                <h4>Shop</h4>
+                <a href="./product.html">All Products</a>
+                <a href="./product.html">Electronics</a>
+                <a href="./product.html">Fashion</a>
+                <a href="./product.html">Accessories</a>
+            </div>
+
+            <div>
+                <h4>Company</h4>
+                <a href="./loading.html">About Us</a>
+                <a href="./loading.html">Contact</a>
+                <a href="./login.html">Login</a>
+                <a href="./register.html">Register</a>
+            </div>
+
+            <div>
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 ShopZone. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="./product.js"></script>
+
+</body>
+</html>
